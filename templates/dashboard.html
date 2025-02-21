@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics Dashboard</title>
+</head>
+<body>
+    <h1>Analytics Dashboard</h1>
+    <p>Total Queries: {{ total_queries }}</p>
+    <h2>Top Queries</h2>
+    <ul>
+        {% for query in top_queries %}
+            <li>{{ query.user_text }} - {{ query.count }} times</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
